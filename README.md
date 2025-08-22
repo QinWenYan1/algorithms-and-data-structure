@@ -9,7 +9,7 @@
 
 * **浙江大学 MOOC 数据结构课程**
 
-  * [课程主页（中国大学 MOOC）](https://www.icourse163.org/course/ZJU-93001?from=searchPage&outVendor=zw_mooc_pcssjg_)
+  * [数据结构-邓俊辉]([https://www.icourse163.org/course/ZJU-93001?from=searchPage&outVendor=zw_mooc_pcssjg](https://next.xuetangx.com/course/THU08091000384/26284633)_)
   * 视频学习笔记、课件整理与示例代码 (C++)
 
 * **代码随想录**
