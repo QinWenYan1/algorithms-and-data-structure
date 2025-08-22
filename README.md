@@ -30,9 +30,8 @@ Data-Structure-and-Algorithm-Notes/
 │
 ├── README.md                  # 仓库说明（首页）
 │
-├── mooc-zju/                  # 浙江大学 MOOC 笔记与资料
+├── data-structure/                  # data structure 笔记与资料
 │   ├── notes/                 # 课程笔记 (Markdown)
-│   ├── slides/                # 课件 (PPT/PDF)
 │   └── code/                  # 课程示例代码 (C++)
 │
 ├── code-suixianglu/           # 《代码随想录》刷题心得
