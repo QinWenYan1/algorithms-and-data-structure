@@ -15,8 +15,8 @@
 
 ## 目录（已创建 / 待创建）
 
-- ✅ [fibonacci.md](./fibonacci.md) — 斐波那契数（示例）  
-- ⬜ `climbing_stairs.md` — 待添加  
+- ✅ [fibonacci.md](./fibonacci.md) — 斐波那契数  
+- ✅ [climbing_stairs.md](./climbing_stairs.md) — 爬楼梯  
 - ⬜ `knapsack_01.md` — 待添加  
 - ⬜ `longest_increasing_subsequence.md` — 待添加  
 - ...（继续添加）
