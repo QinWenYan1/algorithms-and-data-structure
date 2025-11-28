@@ -1,6 +1,6 @@
 # 斐波那契数 — Fibonacci Number
 
-- **题目（LeetCode）**： [🔗 题目](https://leetcode.cn/problems/fibonacci-number/description/)  
+- **题目（LeetCode 509）**： [🔗 题目](https://leetcode.cn/problems/fibonacci-number/description/)  
 - **难度**：简单
 - **解析 / 学习链接**：  
   - [🧠 文字解析（代码随想录/Carl）](https://www.google.com/search?q=https://programmercarl.com/0509.%25E6%2596%2590%25E6%25B3%25A2%25E9%2582%25A3%25E5%25A5%2587%25E6%2595%25B0.html%23%25E7%25AE%2597%25E6%25B3%2595%25E5%2585%25AC%25E5%25BC%2580%25E8%25AF%25BE)  
@@ -77,3 +77,5 @@ public:
     }
 }; 
 ```
+* 时间复杂度: O(n)
+* 空间复杂度: O(1)
