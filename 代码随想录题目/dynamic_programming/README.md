@@ -15,8 +15,9 @@
 
 ## 目录（已创建 / 待创建）
 
-- ✅ [fibonacci.md](./fibonacci.md) — 斐波那契数  
-- ✅ [climbing_stairs.md](./climbing_stairs.md) — 爬楼梯  
+- ✅ [dp_1_fibonacci.md](./dp_1_fibonacci.md) — 斐波那契数  
+- ✅ [dp_2_climbing_stairs.md](./dp_2_climbing_stairs.md) — 爬楼梯  
+- ✅ [dp_3_min_cost_climbing_stairs.md](./dp_3_min_cost_climbing_stairs.md) — 使用最小花费爬楼梯
 - ⬜ `knapsack_01.md` — 待添加  
 - ⬜ `longest_increasing_subsequence.md` — 待添加  
 - ...（继续添加）
