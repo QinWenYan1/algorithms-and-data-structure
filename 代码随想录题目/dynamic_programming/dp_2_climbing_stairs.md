@@ -22,5 +22,39 @@
 
 ---
 ## 代码实现
+* 不难发现其实就是斐波那契数列问题
+
+```cpp
+class Solution {
+public:
+    int climbStairs(int n) {
+
+        //确定dp含义：dp表示迭代n步的时候的步数
+        int dp; 
+
+        //初始化从第一步和第二步开始
+        int dpI = 1, dpJ = 2; 
+
+        //注意edge case, dp[1] = 1
+        if (n == 1) return dpI; 
+
+        //确定递推公式：
+        //dp[i] = dp[i-1] + dp[i-2]
+
+        for (int i = 2; i < n; ++i ){
+
+            dp = dpI + dpJ; 
+            dpI = dpJ;
+            dpJ = dp; 
+
+        }
+
+        return dpJ; 
+
+    }
+    
+};
+
+```
 
   
