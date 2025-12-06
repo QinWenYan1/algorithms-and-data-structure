@@ -19,7 +19,7 @@
 - ✅ [dp_2_climbing_stairs.md](./dp_2_climbing_stairs.md) — 爬楼梯  
 - ✅ [dp_3_min_cost_climbing_stairs.md](./dp_3_min_cost_climbing_stairs.md) — 使用最小花费爬楼梯
 - ✅ [dp_4_unique_paths.md](./dp_4_unique_paths.md) — 不同路径
-- ⬜ `knapsack_01.md` — 待添加  
+- ✅ [dp_5_unique_paths2.md](./dp_4_unique_paths2.md) — 不同路径 2
 - ⬜ `longest_increasing_subsequence.md` — 待添加  
 - ...（继续添加）
 
