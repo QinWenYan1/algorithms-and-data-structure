@@ -29,3 +29,90 @@
 ---
 ## 代码实现
 
+```cpp
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+
+        int x_size = obstacleGrid[0].size();
+        int y_size = obstacleGrid.size(); 
+
+        vector<vector<int>> dp(y_size, vector<int>(x_size, 0)); 
+
+
+        //初始化
+        for(int x = 0; (x < x_size) && (obstacleGrid[0][x] == 0); ++x) dp[0][x] = 1; 
+        for(int y = 0; (y < y_size) && (obstacleGrid[y][0] == 0); ++y) dp[y][0] = 1;
+
+
+        for(int y = 1 ; y < y_size; ++y){
+
+            for(int x = 1; x < x_size; ++x){
+
+                if (obstacleGrid[y][x] != 1){
+
+                    dp[y][x] = dp[y-1][x] + dp[y][x-1];
+
+                }
+
+            }
+
+        }
+
+        return dp[y_size-1][x_size-1]; 
+
+        
+    }
+};
+```
+* 时间复杂度: O(mn)
+* 空间复杂度: O(mn)
+* 另外一定要注意: 
+    * 初始化时迭代条件`(x < x_size) &&(obstacleGrid[0][x] == 0);`与 `(obstacleGrid[0][x] == 0)&&(x < x_size);`两者的差异
+    * 第二个有**越界**的可能
+* 同理， 我们还可以使用滚动数组来优化:
+
+```cpp
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+
+        int x_size = obstacleGrid[0].size();
+        int y_size = obstacleGrid.size(); 
+        int value_to_y = 1; 
+
+        vector<int> dp(x_size, 0); 
+
+        //特殊情况
+        if(obstacleGrid[0][0] == 1 || obstacleGrid[y_size-1][x_size-1] == 1) return 0;
+
+        //初始化
+        for(int x = 0; (x < x_size) && (obstacleGrid[0][x] == 0); ++x) dp[x] = 1;  
+
+
+        for(int y = 1 ; y < y_size; ++y){
+
+            if( obstacleGrid[y][0] == 1){ value_to_y = 0; }
+            dp[0] = value_to_y;
+
+            for(int x = 1; x < x_size; ++x){
+
+                if (obstacleGrid[y][x] != 1){
+
+                    dp[x] = dp[x] + dp[x-1];
+
+                }else{
+
+                    dp[x] = 0; 
+
+                }
+
+            }
+
+        }
+
+        return dp[x_size-1]; 
+
+    }
+};
+```
