@@ -28,7 +28,7 @@
 
 ### 2️⃣ 代码随想录（分类刷题 + 解题模板）
 
-* 官方网站：[https://programmercarl.com/](https://programmercarl.com/)
+* 官方网站：[代码随想录](https://programmercarl.com/)
 * 内容按分类组织，例如：
 
   * 数组 / 字符串
