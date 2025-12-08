@@ -15,6 +15,7 @@
 ## 目录（已创建 / 待创建）
 
 - ✅ [arr_vec_1_binary_search.md](./arr_vec_1_binary_search.md) — 二分查找  
+- ✅ [arr_vec_2_remove_element.md](./arr_vec_2_remove_element.md) — 移除元素
 - ...（继续添加）
 
 ---
