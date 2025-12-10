@@ -17,6 +17,7 @@
 - ✅ [arr_vec_1_binary_search.md](./arr_vec_1_binary_search.md) — 二分查找  
 - ✅ [arr_vec_2_remove_element.md](./arr_vec_2_remove_element.md) — 移除元素
 - ✅ [arr_vec_3_sorted_squares.md](./arr_vec_3_sorted_squares.md) — 有序数组的平方
+- ✅ [arr_vec_4_min_subarray_len.md](./arr_vec_4_min_subarray_len.md) — 长度最小的子数组
 - ...（继续添加）
 
 ---
