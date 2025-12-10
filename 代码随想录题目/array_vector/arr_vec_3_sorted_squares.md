@@ -9,13 +9,38 @@
 ---
 ## 关键点（精简）
 
-
-
-
-
+* 我可以发现一个本题规律：经过平方之后，其最大的数一定出现在数组两边, 越来越小的元素将向中间合拢
+* 那么我们就可以使用**双指针**来从两头一个一个将元素放入直到收拢
+* **双指针策略**：
+  * 头尾各一个指针，检查其平方之后谁大谁小， 依次放入到新数组
+  * 直到合拢即可-也就是前面指针已经越过后面的指针就中止
 
 ---
 ## 代码实现
+```cpp
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+
+        vector<int> new_nums(nums.size());
+        int k = new_nums.size()-1; 
+
+        for (int i = 0, j = nums.size()-1; i <= j; ){
+
+            int num1 = nums[i]*nums[i];
+            int num2 = nums[j]*nums[j];
+
+            if (num1 < num2){ new_nums[k--] = num2; --j; }
+            else{ new_nums[k--] = num1; ++i; }
+
+        }
+ 
+    
+        return new_nums; 
+        
+    }
+};
+```
 
  
 
