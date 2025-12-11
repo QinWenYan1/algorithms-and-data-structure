@@ -1,7 +1,7 @@
 # 不同路径 2 — Unique Paths 2
 
 - **题目（LeetCode 62）**： [🔗 题目](https://leetcode.cn/problems/unique-paths-ii/description/)  
-- **难度**：简单
+- **难度**：中等
 - **解析 / 学习链接**：  
   - [🧠 文字解析（代码随想录/Carl）](https://programmercarl.com/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.html)  
   - [🎥 视频讲解（Bilibili）](https://www.bilibili.com/video/BV1Ld4y1k7c6?vd_source=7923b10dbf11c28879c337d8e0bfa8de&spm_id_from=333.788.player.switch&trackid=web_related_0.router-related-2206146-5nk2d.1765021945121.579)
