@@ -8,8 +8,70 @@
 
 ---
 ## 关键点（精简）
+* 本题依然可以使用**前缀和**来解决
+* 当然暴力解决也可以
+* 只是要注意迭代的时候，是纵向的还是横向的迭代，还有迭代的数组大小
 
 
 ---
 ## 代码实现
 
+```cpp
+#include <climits>
+#include <cmath>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+int total = 0, mid = 0, max = 0;
+
+//开始构建数据
+int n = 0, m = 0;
+cin >> n >> m;
+vector<vector<int>> lands(n, vector<int>(m));
+
+for (auto &e : lands) {
+    for (auto &ei : e) {
+        cin >> ei;
+        total += ei;
+    }
+}
+
+vector<int> horizontal(n);
+for (int i = 0; i < n; ++i) {
+    int temp = 0;
+    for (const auto &e : lands[i]) {
+        temp += e;
+    }
+    horizontal[i] = temp;
+}
+
+vector<int> vertical(m);
+for (int i = 0; i < m; ++i) {
+    int temp = 0;
+    for (const auto &e : lands) {
+        temp += e[i];
+    }
+    vertical[i] = temp;
+}
+
+//现在开始选出最优解
+int result = INT_MAX;
+int verticalCut = 0;
+for (const auto e : vertical) {
+    verticalCut += e; 
+    result = min(result, abs(total - verticalCut - verticalCut));
+}
+
+int horizontalCut = 0; 
+for (const auto e : horizontal) {
+    horizontalCut += e; 
+    result = min(result, abs(total - horizontalCut - horizontalCut));
+}
+
+cout << result << endl;
+}
+```
