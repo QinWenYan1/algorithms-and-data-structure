@@ -8,6 +8,66 @@
  
 
 ---
+
+## 关键点（精简）
+
+
+1. **寻找左边界 (Lower Bound)**
+* **核心逻辑**：
+    * 我们核心逻辑就是找第一个**大于或等于**`target`元素
+    * `nums[mid] == target` 时，我们不满足，我们要找更靠左的。
+    * 因为在`mid`的左边有可能还有等于`target`的元素
+    * 所以让 `high = mid`，把区间向左压缩。
+    * 因此 `nums[mid]`大于或等于` target`时都是向左压缩：
+        * `if (nums[mid] >= target) high = mid;`
+* **结果**：
+    * 循环结束时，`low`和`high`都是指的同一个位置
+    * 都是第一个**大于或等于** `target` 的位置。
+
+
+2. **寻找右边界 (巧妙转化)**
+* 右边界代表着第一个大于`target`的元素的元素的位置-1
+* 但是我们没必要再去写一个检查第一个大于`target`的元素
+* **技巧**：
+    * 复用之前的函数寻找第一个大于或等于`target+1`的元素
+    * 所找到目标位置一定就是`target`右边界的下一个位置
+* **实现**：直接调用 `lowerbound(target + 1) - 1`。
+
+
+
+---
+
+### 必须注意的 2 个细节
+
+即使思路对了，二分查找也常因为细节挂掉。请记住这三个检查点：
+
+#### 1. 区间定义的一致性
+
+我使用的是 **左闭右开** `[low, high)` 风格：
+
+* 初始化：`high = nums.size()`（因为取不到 `nums.size()`）。
+* 循环条件：`low < high`，`low == high`时就会结束
+* 二分查找更新的两种形态：
+
+    | 需求 | 判定逻辑 (当 `nums[mid] == target` 时) | 最终 `low` 的位置 |
+    | --- | --- | --- |
+    | **找左边界** | `high = mid` (向左看) | 第一个 $\ge$ target 的元素 |
+    | **找右边界** | `low = mid + 1` (向右看) | 第一个 $>$ target 的元素 |
+
+
+#### 2. 边界和特殊情况的检查
+
+
+
+这是**教科书级**的处理方式：
+* 当`target` 比数组里所有数都大的时候，最后`low`和`high`两个指针都会指向`nums.size()`，也就是尾后位置。
+* 这样会有越界风险，所以我们需要检查：
+    * `low == nums.size()`
+
+* 当 `target` 不在数组中，我们还需要检查指针是否指向的是`target`：
+    * `nums[low] != target`：
+
+---
 ## 代码实现
 
 ```cpp
@@ -15,7 +75,6 @@ class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
         
-        if (nums.size() == 0) return {-1, -1}; 
         int low = lowerbound(nums, target); 
         
         if ( low == nums.size() || nums[low] != target ) return {-1, -1}; 
