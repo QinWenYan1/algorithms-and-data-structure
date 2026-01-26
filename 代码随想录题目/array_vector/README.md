@@ -22,6 +22,7 @@
     * [arr_vec_11_perfect_square.md](./arr_vec_11_perfect_square.md) — 有效的完全平方数
 - ✅ [arr_vec_2_remove_element.md](./arr_vec_2_remove_element.md) — 移除元素
     * [arr_vec_12_move_zeroes.md](./arr_vec_12_move_zeroes.md) — 移动0
+    * [arr_vec_13_remove_duplicates.md](./arr_vec_13_remove_duplicates.md) — 删除有序数组中重复项
 - ✅ [arr_vec_3_sorted_squares.md](./arr_vec_3_sorted_squares.md) — 有序数组的平方
 - ✅ [arr_vec_4_min_subarray_len.md](./arr_vec_4_min_subarray_len.md) — 长度最小的子数组
 - ✅ [arr_vec_5_generate_matrix.md](./arr_vec_5_generate_matrix.md) — 螺旋矩阵2 
