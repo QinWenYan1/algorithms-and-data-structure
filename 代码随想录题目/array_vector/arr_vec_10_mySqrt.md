@@ -28,7 +28,7 @@
 ---
 ## 代码实现
 
-```
+```cpp
 class Solution {
 public:
     int mySqrt(int x) {
