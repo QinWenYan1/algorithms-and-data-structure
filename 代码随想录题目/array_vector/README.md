@@ -18,6 +18,7 @@
 - ✅ [arr_vec_1_binary_search.md](./arr_vec_1_binary_search.md) — 二分查找  
     * [arr_vec_8_search_inseert.md](./arr_vec_8_search_insert.md) — 搜索插入位置
     * [arr_vec_9_search_range.md](./arr_vec_9_search_range.md) — 在排序数组中查找元素的第一个和最后一个位置
+    * [arr_vec_10_mySqrt.md](./arr_vec_10_mySqrt.md) — x的平方根
 - ✅ [arr_vec_2_remove_element.md](./arr_vec_2_remove_element.md) — 移除元素
 - ✅ [arr_vec_3_sorted_squares.md](./arr_vec_3_sorted_squares.md) — 有序数组的平方
 - ✅ [arr_vec_4_min_subarray_len.md](./arr_vec_4_min_subarray_len.md) — 长度最小的子数组
