@@ -15,8 +15,8 @@
 * 同时快指针向右寻找非0元素，保证慢指针和快指针之间，也就是:
     * `[slowPtr, quickPtr)`之间都是空位
     * 一旦`nums[quickPtr]`为非0元素
-    * 随即将`nums[slowPtr]``和nums[quickPtr]`互换位置
-    * 保证`[slowPtr, quickPtr)`依然都为空位，保持成立
+    * 随即将`nums[slowPtr]`和`nums[quickPtr]`互换位置
+    * 保证`[slowPtr+1, quickPtr)`依然都为空位，保持成立
     * 当`quickPtr`到达`n`时候，就能保证最尾巴的位置都是空位置
     * 遍历此时也结束
 
