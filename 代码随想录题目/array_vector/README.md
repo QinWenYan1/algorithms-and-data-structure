@@ -26,6 +26,7 @@
     * [arr_vec_14_backspace_compare.md](./arr_vec_14_backspace_compare.md) — 比较含退格的字符串
 - ✅ [arr_vec_3_sorted_squares.md](./arr_vec_3_sorted_squares.md) — 有序数组的平方
 - ✅ [arr_vec_4_min_subarray_len.md](./arr_vec_4_min_subarray_len.md) — 长度最小的子数组
+    * [arr_vec_15_total_fruit.md](./arr_vec_15_total_fruit.md) — 水果成篮
 - ✅ [arr_vec_5_generate_matrix.md](./arr_vec_5_generate_matrix.md) — 螺旋矩阵2 
 - ✅ [arr_vec_6_interval_sum.md](./arr_vec_6_interval_sum.md) — 区间和
 - ✅ [arr_vec_7_real_estate_developer_buy_property.md.md](./arr_vec_7_real_estate_developer_buy_property.md) — 开发商购买土地
