@@ -3,7 +3,7 @@
 - **题目（LeetCode 59）**： [🔗 题目](https://kamacoder.com/problempage.php?pid=1070)  
 - **难度**：未知
 - **解析 / 学习链接**：  
-  - [🧠 文字解析（代码随想录/Carl）](https://programmercarl.com/kamacoder/0058.%E5%8C%BA%E9%97%B4%E5%92%8C.html)  
+  - [🧠 文字解析（代码随想录）](https://programmercarl.com/kamacoder/0058.%E5%8C%BA%E9%97%B4%E5%92%8C.html)  
   
 
 ---
