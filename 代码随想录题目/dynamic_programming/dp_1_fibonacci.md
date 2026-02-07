@@ -3,8 +3,8 @@
 - **题目（LeetCode 509）**： [🔗 题目](https://leetcode.cn/problems/fibonacci-number/description/)  
 - **难度**：简单
 - **解析 / 学习链接**：  
-  - [🧠 文字解析（代码随想录/Carl）](https://www.google.com/search?q=https://programmercarl.com/0509.%25E6%2596%2590%25E6%25B3%25A2%25E9%2582%25A3%25E5%25A5%2587%25E6%2595%25B0.html%23%25E7%25AE%2597%25E6%25B3%2595%25E5%2585%25AC%25E5%25BC%2580%25E8%25AF%25BE)  
-  - [🎥 视频讲解（Bilibili）](https://www.bilibili.com/video/BV1f5411K7mo?vd_source=7923b10dbf11c28879c337d8e0bfa8de&spm_id_from=333.788.videopod.sections)
+  - [🧠 文字解析（代码随想录）](https://www.google.com/search?q=https://programmercarl.com/0509.%25E6%2596%2590%25E6%25B3%25A2%25E9%2582%25A3%25E5%25A5%2587%25E6%2595%25B0.html%23%25E7%25AE%2597%25E6%25B3%2595%25E5%2585%25AC%25E5%25BC%2580%25E8%25AF%25BE)  
+  - [🎥 视频讲解（代码随想录）](https://www.bilibili.com/video/BV1f5411K7mo?vd_source=7923b10dbf11c28879c337d8e0bfa8de&spm_id_from=333.788.videopod.sections)
 
 ---
 ## 关键点（精简）
