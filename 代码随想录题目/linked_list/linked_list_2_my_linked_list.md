@@ -42,17 +42,22 @@
 2. **快速判断**：通过`len`立即知道索引是否越界
 3. **代码复用**：`addAtHead/Tail`可复用`addAtIndex`逻辑
 4. **内存安全**：删除时正确释放内存
-
+---
 ## **设计精髓**
 > **用虚拟头节点把"边界问题"变成"普通问题"**  
 > **用长度变量把"越界检查"变成"常数时间判断"**
 
 这种设计让链表的所有操作都遵循同一个模式，大幅降低实现复杂度。
 
+---
+## **代码优化**
+> **添加尾指针，将 `addAtTail` 从 O(n) 优化到 O(1)，直接定位尾部插入无需遍历。**
+
+
+
 
 ---
-
-## 代码实现
+## 代码实现（优化`addAtTail`版本）
 
 ```cpp
 class MyLinkedList {
@@ -63,11 +68,12 @@ class MyLinkedList {
         Node *next;
     };
     Node *_dummyHead; //虚拟头节点
+    Node *_dummyTail; //优化addAtTail: 虚拟尾节点
     unsigned _len; //记录长度
 
 public:
 
-    MyLinkedList(): _dummyHead(new Node()), _len(0){} //初始化
+    MyLinkedList(): _dummyHead(new Node()), _len(0), _dummyTail(new Node()){ _dummyHead->next = _dummyTail; } //初始化
     
     int get(int index) {
         //建一个计数器来确定哪一个node是我们要找的
@@ -95,18 +101,14 @@ public:
         ++_len;
     }
     
-    void addAtTail(int val) {
-        Node *curr = _dummyHead, *nxt = _dummyHead->next; 
+    void addAtTail(int val) { //O(n) -> O(1)
+        Node *tail = _dummyTail; 
 
-        //依旧遍历到相应位置，也就是尾部,
-        //开始迭代遍历
-        while(nxt){ //判断是不是尾部只需要看next是不是nullptr
-            curr = nxt; 
-            nxt = curr->next;
-        } 
-
-        Node * newNodePtr = new Node(val, nxt); 
-        curr->next = newNodePtr;
+        //我们直接使用_dummyTail来进行添加
+        Node * newNodePtr = new Node(); 
+        tail->value = val; 
+        tail->next = newNodePtr;
+        _dummyTail = newNodePtr; 
         ++_len; 
 
     }
@@ -157,4 +159,23 @@ public:
  * obj->addAtIndex(index,val);
  * obj->deleteAtIndex(index);
  */
+```
+
+这里放一个未优化的`addAtTail`的对比一下:
+```cpp
+void addAtTail(int val) {
+        Node *curr = _dummyHead, *nxt = _dummyHead->next; 
+
+        //依旧遍历到相应位置，也就是尾部,
+        //开始迭代遍历
+        while(nxt){ //判断是不是尾部只需要看next是不是nullptr
+            curr = nxt; 
+            nxt = curr->next;
+        } 
+
+        Node * newNodePtr = new Node(val, nxt); 
+        curr->next = newNodePtr;
+        ++_len; 
+
+    }
 ```
