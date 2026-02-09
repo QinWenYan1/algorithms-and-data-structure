@@ -16,6 +16,7 @@
 ## 目录（已创建 / 待创建）
 
 - ✅ [linked_list_1_remove_elements.md](./linked_list_1_remove_elements.md) — 移除链表元素 
+- ✅ [linked_list_2_my_linked_list.md](./linked_list_2_my_linked_list.md) — 设计链表
     
 - ...（继续添加）
 
