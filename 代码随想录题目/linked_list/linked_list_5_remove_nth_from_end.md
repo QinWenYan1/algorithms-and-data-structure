@@ -1,4 +1,4 @@
-# 交换链表中的节点 — Swap pairs
+# 删除链表的倒数第N个节点 — remove Nth from end
 
 - **题目（LeetCode 19）**： [🔗 题目](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)  
 - **难度**: 中等
