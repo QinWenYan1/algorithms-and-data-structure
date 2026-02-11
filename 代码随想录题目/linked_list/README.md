@@ -21,6 +21,7 @@
 - ✅ [linked_list_4_swap_pairs.md](./linked_list_4_swap_pairs.md) — 交换链表中的节点
 - ✅ [linked_list_5_remove_nth_from_end.md](./linked_list_5_remove_nth_from_end.md) — 删除链表的倒数第N个
 - ✅ [linked_list_6_get_intersection_node.md](./linked_list_6_get_intersection_node.md) — 链表相交
+- ✅ [linked_list_7_detect_cycle.md](./linked_list_7_detect_cycle.md) — 链表相交
 - ...（继续添加）
 
 ---
