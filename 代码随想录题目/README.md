@@ -8,8 +8,9 @@
 ## 🔗 章节目录（点击跳转）
 
 - 🔷 [动态规划（Dynamic Programming）](./dynamic_programming/README.md) — 已开始  
-- 🔷 [数组/向量（Array/vector）](./array_vector/README.md)
-- 🔷 [链表（linked_list）](./linked_list/README.md) — 已开始    
+- 🔷 [数组/向量（Array/vector）](./array_vector/README.md) — 已开始
+- 🔷 [链表（linked_list）](./linked_list/README.md) — 已开始 
+- 🔷 [哈希表（hash_table）](./hash_table/README.md) — 已开始    
 - ⬜ 栈与队列（stack_queue） — 待添加  
 - ⬜ 回溯 / DFS（backtracking） — 待添加  
 - ⬜ 二叉树（binary_tree） — 待添加  
