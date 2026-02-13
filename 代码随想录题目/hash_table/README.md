@@ -15,7 +15,7 @@
 
 ## 目录（已创建 / 待创建）
 
-- ✅ [linked_list_1_remove_elements.md](./linked_list_1_remove_elements.md) — 移除链表元素 
+- ✅ [hash_table_1_is_anagram.md](./hash_table_1_is_anagram.md) — 有效字母异味词 
 
 - ...（继续添加）
 
