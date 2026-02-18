@@ -16,6 +16,7 @@
 ## 目录（已创建 / 待创建）
 
 - ✅ [hash_table_1_is_anagram.md](./hash_table_1_is_anagram.md) — 有效字母异味词 
+- ✅ [hash_table_2_intersection.md](./hash_table_2_intersection.md) — 两个数组的交集
 
 - ...（继续添加）
 
