@@ -18,6 +18,7 @@
 - ✅ [hash_table_1_is_anagram.md](./hash_table_1_is_anagram.md) — 有效字母异味词 
 - ✅ [hash_table_2_intersection.md](./hash_table_2_intersection.md) — 两个数组的交集
 - ✅ [hash_table_3_is_happy.md](./hash_table_3_is_happy.md) — 快乐数
+- ✅ [hash_table_4_two_sum.md](./hash_table_4_two_sum.md) — 两数之和
 
 - ...（继续添加）
 
