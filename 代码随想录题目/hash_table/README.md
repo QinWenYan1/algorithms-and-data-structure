@@ -19,6 +19,7 @@
 - ✅ [hash_table_2_intersection.md](./hash_table_2_intersection.md) — 两个数组的交集
 - ✅ [hash_table_3_is_happy.md](./hash_table_3_is_happy.md) — 快乐数
 - ✅ [hash_table_4_two_sum.md](./hash_table_4_two_sum.md) — 两数之和
+- ✅ [hash_table_5_four_sum_count.md](./hash_table_5_four_sum_count.md) — 四数相加
 
 - ...（继续添加）
 

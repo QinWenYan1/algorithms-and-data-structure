@@ -4,7 +4,8 @@
 - **难度**：简单
 - **解析 / 学习链接**：  
   - [🧠 文字解析（代码随想录）](https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html)  
-  - [🎥 视频讲解（代码随想录）](bilibili.com/video/BV1Md4y1Q7Yh/)  
+  - [🎥 视频讲解（代码随想录）](bilibili.com/video/BV1Md4y1Q7Yh/) 
+  - [🧠 文字解析（力扣官方题解， 推荐阅读）](https://leetcode.cn/problems/two-sum/solutions/434597/liang-shu-zhi-he-by-leetcode-solution)   
 
 
 ---
