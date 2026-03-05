@@ -52,7 +52,7 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
         //我们建立一个array的来记录s出现的char
-        //然后在遍历t的时候再一个一个消去知道最后如果所有array的元素都为0了说明是anagram
+        //然后在遍历t的时候再一个一个消去直到最后如果所有array的元素都为0了说明是anagram
         array<int, 26> lookup{}; 
         //通过偏移量来计算映射
         for (const auto e : s) ++ lookup[e -'a']; 
