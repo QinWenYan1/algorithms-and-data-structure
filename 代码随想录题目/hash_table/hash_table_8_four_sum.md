@@ -4,7 +4,9 @@
 - **难度**：中等
 - **解析 / 学习链接**：  
   - [🧠 文字解析（代码随想录）](https://programmercarl.com/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)  
-  - [🎥 视频讲解（代码随想录）](https://www.bilibili.com/video/BV1DS4y147US/?vd_source=7923b10dbf11c28879c337d8e0bfa8de)  
+  - [🎥 视频讲解（代码随想录）](https://www.bilibili.com/video/BV1DS4y147US/?vd_source=7923b10dbf11c28879c337d8e0bfa8de) 
+  - [🧠 文字讲解（灵茶山爱府） - 推荐阅读](https://leetcode.cn/problems/4sum/solutions/2344514/ji-zhi-you-hua-ji-yu-san-shu-zhi-he-de-z-1f0b)
+ 
 
 
 ---
@@ -18,12 +20,16 @@
 
 **不同点（集中在剪枝操作）：**
 
-*   **三数之和（target=0）的剪枝**：利用"正数不可能凑出0"的特性。当 `nums[i] > 0` 时直接 `break`，因为数组已排序，后面都是正数，三数之和必大于0。这是基于**符号特性**的剪枝。
+* **外层枚举 `nums[a]` 的优化：**
+  1. **最小和剪枝（break）**：若 `nums[a] + nums[a+1] + nums[a+2] + nums[a+3] > target`，说明当前及后续最小的四个数之和都太大，直接退出外层循环。
+  2. **最大和剪枝（continue）**：若 `nums[a] + nums[n-3] + nums[n-2] + nums[n-1] < target`，说明当前 `a` 即使配上最大的三个数也不够，但后面还有更大的 `a` 可能满足，继续枚举。
+  3. **去重**：若 `a > 0` 且 `nums[a] == nums[a-1]`，跳过（该值作为首元素已处理过）。
 
-*   **四数之和（target为任意值）的剪枝**：由于 target 可能为负数或正数，且负负得正、正负相加等情况复杂，不能简单判断 `nums[i] > target`。必须使用**极值比较**：
-    *   **最小和剪枝**：若 `nums[i] + nums[i+1] + nums[i+2] + nums[i+3] > target`，说明当前及后续最小的四个数之和都太大，直接 `break`。
-    *   **最大和剪枝**：若 `nums[i] + nums[n-3] + nums[n-2] + nums[n-1] < target`，说明当前固定值即使配上最大的三个数都不够，应 `continue` 尝试下一个 `i`。
-    * 内层循环同理，只是固定了第二个然后来比较
+* **内层枚举 `nums[b]` 的优化：**
+  1. **最小和剪枝（break）**：若 `nums[a] + nums[b] + nums[b+1] + nums[b+2] > target`，说明当前及后续 `b` 都必然超标，退出内层循环。
+  2. **最大和剪枝（continue）**：若 `nums[a] + nums[b] + nums[n-2] + nums[n-1] < target`，说明当前 `b` 太小，但后面还有更大的 `b` 可能满足，继续枚举。
+  3. **去重（关键）**：必须满足 **`b > a + 1`** 且 `nums[b] == nums[b-1]` 才跳过。  
+   *原因*：`b` 从 `a+1` 开始，当 `b = a+1` 时是当前 `a` 下的第一个 `b`，若此时与前值（即 `nums[a]`）相同也是合法组合，不能跳过；只有 `b > a+1` 且重复时才说明该组合已处理过。
 
 **关键差异总结**：三数之和剪枝看**符号**（是否>0），四数之和剪枝看**范围**（当前固定值与剩余数组极值的关系）。
 
