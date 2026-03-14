@@ -6,7 +6,7 @@
 
 ## 📘 字符串 — 理论基础 & 学习资源
 
-- 📄 推荐阅读 / 理论基础 — [字符串理论基础与详解（代码随想录）]( )  
+
 - 📄 题目总结 / 理论基础 — [字符串题目总结（代码随想录）](https://programmercarl.com/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%80%BB%E7%BB%93.html#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6%E4%B8%B2) 
 
 > 建议先观看视频和阅读理论基础，对字符串的概念形成基本认识，再逐题练习。
@@ -15,7 +15,7 @@
 
 ## 目录（已创建 / 待创建）
 
-- ✅ [linked_list_1_remove_elements.md](./linked_list_1_remove_elements.md) — 移除链表元素 
+- ✅ [string_1_reverse_string.md](./string_1_reverse_string.md) — 反转字符串
 
 - ...（继续添加）
 
