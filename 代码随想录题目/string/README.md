@@ -16,6 +16,7 @@
 ## 目录（已创建 / 待创建）
 
 - ✅ [string_1_reverse_string.md](./string_1_reverse_string.md) — 反转字符串
+- ✅ [string_2_reverse_string_2.md](./string_2_reverse_string_2.md) — 反转字符串 2 
 
 - ...（继续添加）
 
