@@ -17,7 +17,7 @@
 
 - ✅ [string_1_reverse_string.md](./string_1_reverse_string.md) — 反转字符串
 - ✅ [string_2_reverse_string_2.md](./string_2_reverse_string_2.md) — 反转字符串 2 
-
+- ✅ [string_3_replace_number.md](./string_3_replace_number.md) — 替换数字
 - ...（继续添加）
 
 ---
