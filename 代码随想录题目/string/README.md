@@ -19,6 +19,7 @@
 - ✅ [string_2_reverse_string_2.md](./string_2_reverse_string_2.md) — 反转字符串 2 
 - ✅ [string_3_replace_number.md](./string_3_replace_number.md) — 替换数字
 - ✅ [string_4_reverse_words.md](./string_4_reverse_words.md) — 反转字符串中单词
+- ✅ [string_5_right_swap_string.md](./string_5_right_swap_string.md) — 右旋字符串
 - ...（继续添加）
 
 ---

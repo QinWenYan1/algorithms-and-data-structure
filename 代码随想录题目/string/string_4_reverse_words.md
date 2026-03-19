@@ -1,6 +1,6 @@
 # 翻转字符串里的单词 — reverse words 
 
-- **题目（卡码网 151）**： [🔗 题目](https://leetcode.cn/problems/reverse-words-in-a-string/description/)  
+- **题目（力扣 151）**： [🔗 题目](https://leetcode.cn/problems/reverse-words-in-a-string/description/)  
 - **难度**：中等
 
 - **解析 / 学习链接**：
