@@ -19,9 +19,7 @@
       * [next数组建立逻辑处理 - 文字](https://www.geeksforgeeks.org/dsa/kmp-algorithm-for-pattern-searching/#naive-approach-and-how-kmp-overcomes-it)
 ---
 **核心思路**：
-  * **先让模式串自己跟自己比算出失配回退表（next），匹配主串时一旦失配直接查表跳到下一个可能位置，保证主串指针 i 永不回溯。**
-
-
+> **先让模式串自己跟自己比算出失配回退表（next），匹配主串时一旦失配直接查表跳到下一个可能位置，保证主串指针永不回溯。**
 
 1. **next数组定义**：
 `next[i]` = `pattern[0..i]` 的最长相等**前缀后缀**长度（含i）
@@ -32,39 +30,43 @@ next:    0 0 1 2 3 0 1
 ```
 
 2. **构建next（自己匹配自己）**：
-模式串双指针自匹配：`posfix`遍历后缀尾，`prefix`维护前缀长，相等则`prefix++`，失配则`prefix`回退`next[prefixs-1]`，`next[prefix]`记录`prefix`。
+模式串内部匹配：`suffix`遍历后缀尾，`prefix`维护当前最长前后缀长度。
 
 ```cpp
-prefix = 0; next[0] = prefix;
-for(i=1; i<n; i++) {
-    while(prefix>0 && p[prefix]!=p[postfix]) prefix = next[prefix-1];  // 回退
-    if(p[prefix]==p[postfix]) j++;                      // 匹配+1
-    next[postfix] = prefix;                             // 记录长度
+int prefix = 0;                 // 当前匹配的前缀长度（也是下一个要比的前缀位置）
+next[0] = 0;
+for(int suffix = 1; suffix < n; suffix++) {  // suffix从1开始遍历后缀尾
+    while(prefix > 0 && p[prefix] != p[suffix]) 
+        prefix = next[prefix - 1];           // 失配：回退到前一个位置的最长前缀
+    if(p[prefix] == p[suffix]) 
+        prefix++;                            // 匹配：长度+1
+    next[suffix] = prefix;                   // 记录前suffix+1个字符的最长前后缀长
 }
 ```
 
 3. **匹配主串（查表回退）**：
-主串指针`i`单向遍历绝不回溯，`j`失配时按`next`表跳回最长公共前缀处续比，匹配则并进，直至`j`贯穿模式串即为命中。
+主串指针`txtI`单向遍历不回溯，模式串指针`patI`失配时跳`next[patI-1]`继续比，匹配则并进，直至`patI`贯穿模式串即为命中。
 
 ```cpp
-j = 0;
-for(i=0; i<主串长; i++) {
-    while(j>0 && 主[i]!=针[j]) j = next[j-1]; // ⚠️ 关键：j-1！
-    if(主[i]==针[j]) j++;
-    if(j==针长) return i-j+1;
+int patI = 0;                   // 模式串指针（也是已匹配长度）
+for(int txtI = 0; txtI < haystack.size(); txtI++) {
+    while(patI > 0 && haystack[txtI] != needle[patI]) 
+        patI = next[patI - 1]; // ⚠️ 关键：patI-1！
+    if(haystack[txtI] == needle[patI]) 
+        patI++;
+    if(patI == needle.size()) 
+        return txtI - patI + 1;
 }
 ```
 
-
-4. **易错点（死记）**:
-`j`是已匹配长度，查表永远用 **`next[j-1]`**（除了`j=0`）。
+4. **易错点（死记）**：
+`prefix`和`patI`都是**已匹配长度**，查表永远用 **`next[?-1]`**（除了等于0）。
 
 | 场景 | 用哪个下标 | 为什么 |
 |:---:|:---:|:---|
 | **构建时回退** | `next[prefix-1]` | `prefix`是当前长度，前`prefix`个字符信息在`prefix-1` |
-| **匹配时回退** | `next[j-1]` | 已匹配`j`个（`0~j-1`），信息在`j-1` |
+| **匹配时回退** | `next[patI-1]` | 已匹配`patI`个（`0~patI-1`），信息在`patI-1` |
 | **next含义** | 前`i+1`个字符 | `next[i]`含`i`这个位置 |
-
 
 
 
