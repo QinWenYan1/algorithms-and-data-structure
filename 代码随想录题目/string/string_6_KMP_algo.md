@@ -72,3 +72,54 @@ for(int txtI = 0; txtI < haystack.size(); txtI++) {
 
 ---
 ## 代码实现
+```cpp
+```cpp
+class Solution {
+public:
+    // 生成next表：pattern自己匹配自己，记录每个位置的最长相等前后缀长度
+    vector<int> &genNext(vector<int> &next, const string &pattern){
+        int prefix = 0;  // 当前最长前后缀长度（也是下一个要比的前缀位置）
+        next[0] = 0;     // 单个字符无前后缀
+        // suffix遍历后缀末尾（从1开始），prefix维护前缀长度
+        for (int suffix = 1; suffix < next.size(); ++suffix){
+            // 失配：回退到前一个位置的最长前缀处继续尝试
+            while (prefix > 0 && pattern[prefix] != pattern[suffix]){
+                prefix = next[prefix - 1]; 
+            }
+            // 匹配：当前最长前后缀长度+1
+            if(pattern[prefix] == pattern[suffix]){
+                ++prefix;
+            }
+            next[suffix] = prefix;  // 记录前suffix+1个字符的最长前后缀长
+        }
+        return next;
+    }
+
+    int strStr(string haystack, string needle) {
+        if (haystack.size() < needle.size()) return -1;
+        if (needle.empty()) return 0;  // 空模式串特判
+        
+        vector<int> nextTable(needle.size()); 
+        genNext(nextTable, needle);
+
+        int patI = 0;  // 模式串指针（已匹配的字符数，也是当前要比的位置）
+        // txtI遍历主串，patI跟随匹配，失配时patI按next表回退
+        for (int txtI = 0; txtI < haystack.size(); ++txtI){
+            // 失配：回退到最长公共前缀的下一个位置（已匹配patI个，查表用patI-1）
+            while(patI > 0 && haystack[txtI] != needle[patI]){ 
+                patI = nextTable[patI - 1]; 
+            }
+            // 匹配：模式串指针前进
+            if (haystack[txtI] == needle[patI]){
+                ++patI;  
+            }
+            // patI贯穿模式串，匹配成功，返回起始位置
+            if (patI == needle.size()){
+                return txtI - patI + 1; 
+            }
+        }
+        return -1; 
+    }
+};
+```
+```
