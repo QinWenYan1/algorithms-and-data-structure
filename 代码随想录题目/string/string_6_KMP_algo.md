@@ -62,16 +62,18 @@ for suffix 从 1 到 n-1:     // suffix 始终指向后缀尾
 
     * **匹配并进至贯穿**：相等则双指针同步前进，`patI` 走完模式串即命中。
 
-```cpp
-int patI = 0;                   // 模式串指针（也是已匹配长度）
-for(int txtI = 0; txtI < haystack.size(); txtI++) {
-    while(patI > 0 && haystack[txtI] != needle[patI]) 
-        patI = next[patI - 1]; // ⚠️ 关键：patI-1！
-    if(haystack[txtI] == needle[patI]) 
-        patI++;
-    if(patI == needle.size()) 
-        return txtI - patI + 1;
-}
+```
+patI ← 0                          // 已匹配长度（也是模式串当前比对位置）
+
+for txtI 从 0 到 text.length-1:   // 主串指针单向扫描，永不回退
+    while patI > 0 且 text[txtI] ≠ pattern[patI]:
+        patI ← next[patI - 1]    // ⚠️ 关键：失配时回退到次长前缀（注意是 patI-1！）
+    
+    if text[txtI] = pattern[patI]:
+        patI ← patI + 1          // 匹配成功：双指针并进
+    
+    if patI = pattern.length:
+        return txtI - patI + 1     // 贯穿：找到匹配起始位置
 ```
 
 4. **易错点（死记）**：
