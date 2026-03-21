@@ -20,7 +20,8 @@
 - ✅ [string_3_replace_number.md](./string_3_replace_number.md) — 替换数字
 - ✅ [string_4_reverse_words.md](./string_4_reverse_words.md) — 反转字符串中单词
 - ✅ [string_5_right_swap_string.md](./string_5_right_swap_string.md) — 右旋字符串
-- ✅ [string_6_KMP_algo.md](./string_6_string_KMP_algo.md) — 寻找字符串中第一个匹配项的下标
+- ✅ [string_6_KMP_algo.md](./string_6_KMP_algo.md) — 寻找字符串中第一个匹配项的下标
+- ✅ [string_7_repeated_substring_pattern.md](./string_7_repeated_substring_pattern.md) — 重复的子字符串
 - ...（继续添加）
 
 ---
