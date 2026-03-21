@@ -30,22 +30,37 @@ next:    0 0 1 2 3 0 1
 ```
 
 2. **构建next（自己匹配自己）**：
-模式串内部匹配, `suffix`遍历后缀尾，`prefix`维护当前最长前后缀长度。
 
-```cpp
-int prefix = 0;                 // 当前匹配的前缀长度（也是下一个要比的前缀位置）
-next[0] = 0;
-for(int suffix = 1; suffix < n; suffix++) {  // suffix从1开始遍历后缀尾
-    while(prefix > 0 && p[prefix] != p[suffix]) 
-        prefix = next[prefix - 1];           // 失配：回退到前一个位置的最长前缀
-    if(p[prefix] == p[suffix]) 
-        prefix++;                            // 匹配：长度+1
-    next[suffix] = prefix;                   // 记录前suffix+1个字符的最长前后缀长
-}
+    * **模式串内部匹配**：只拿模式串自己跟自己比，找每个前缀的最长相等前后缀，不涉文本串。
+
+    * **`suffix` 遍历后缀尾**：
+        * `suffix` 从 1 往后扫，始终指向当前子串的最后一个字符（即后缀的尾巴）。 
+        * 这是为了计算`suffix`位置的公共子串长度
+    * **`prefix` 维护当前长度**：
+        * `prefix` 存当前已匹配的最长长度（也是下一个该比的前缀位置）。
+        * 于`suffix`比较：
+            **case 1**: `p[suffix]==p[prefix]` 则 `prefix++` 延长
+            **case 2**: 不等则 `prefix` 回跳到 `next[prefix-1]` 试更短的。
+```
+prefix ← 0                 // 当前已匹配的最长长度（即下一个该比的前缀位置）
+next[0] ← 0
+for suffix 从 1 到 n-1:     // suffix 始终指向后缀尾
+    while prefix > 0 且 pattern[prefix] ≠ pattern[suffix]:
+        prefix ← next[prefix-1]    // 失配：跳回次长前缀继续试
+    
+    if pattern[prefix] = pattern[suffix]:
+        prefix ← prefix + 1        // 匹配：延长当前长度
+    
+    next[suffix] ← prefix          // 记录：前 suffix+1 个字符的最长前后缀长
 ```
 
 3. **匹配主串（查表回退）**：
-主串指针`txtI`单向遍历不回溯，模式串指针`patI`失配时跳`next[patI-1]`继续比，匹配则并进，直至`patI`贯穿模式串即为命中。
+
+    * **主串单向不回溯**：`txtI` 从头到尾只进不退，永不回头。
+
+    * **`patI` 失配跳 next**：对不上时 `patI` 回跳到 `next[patI-1]`，省去中间无效比对。
+
+    * **匹配并进至贯穿**：相等则双指针同步前进，`patI` 走完模式串即命中。
 
 ```cpp
 int patI = 0;                   // 模式串指针（也是已匹配长度）
@@ -72,7 +87,6 @@ for(int txtI = 0; txtI < haystack.size(); txtI++) {
 
 ---
 ## 代码实现
-```cpp
 ```cpp
 class Solution {
 public:
@@ -121,5 +135,4 @@ public:
         return -1; 
     }
 };
-```
 ```
