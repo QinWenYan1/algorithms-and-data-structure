@@ -12,8 +12,8 @@
 - 🔷 [链表（linked_list）](./linked_list/README.md) — 已开始 
 - 🔷 [哈希表（hash_table）](./hash_table/README.md) — 已开始    
 - 🔷 [字符串（string）](./string/README.md) — 已开始  
-- 🔷 [双指针（double pointer）](./double_ptr/README.md) — 已开始   
-- ⬜ 栈与队列（stack_queue） — 待添加  
+- 🔷 [双指针（double pointer）](./double_ptr/README.md) — 已开始  
+- 🔷 [栈与队列（stack_queue）](./stack_queue/README.md) — 已开始    
 - ⬜ 回溯 / DFS（backtracking） — 待添加  
 - ⬜ 二叉树（binary_tree） — 待添加  
 - ⬜ 图论（graph） — 待添加
