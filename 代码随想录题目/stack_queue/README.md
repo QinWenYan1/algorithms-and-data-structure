@@ -20,6 +20,7 @@
 ## 目录（已创建 / 待创建）
 
 - ✅ [stack_queue_1_my_queue.md](./stack_queue_1_my_queue.md) — 用栈实现队列
+- ✅ [stack_queue_2_my_stack.md](./stack_queue_2_my_stack.md) — 用队列实现栈
 
 
 
