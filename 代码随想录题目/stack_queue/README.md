@@ -24,7 +24,7 @@
 - ✅ [stack_queue_3_is_valid.md](./stack_queue_3_is_valid.md) — 有效的括号
 - ✅ [stack_queue_4_remove_duplicates.md](./stack_queue_4_remove_duplicates.md) — 删除相邻重复项
 - ✅ [stack_queue_5_eval_RPN.md](./stack_queue_5_eval_RPN.md) — 逆波兰表达式求值
-
+- ✅ [stack_queue_6_max_sliding_window.md](./stack_queue_6_max_sliding_window.md) — 滑动窗口最大值
 
 
 ---
