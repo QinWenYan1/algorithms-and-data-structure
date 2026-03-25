@@ -7,10 +7,7 @@
   - [🎥 视频讲解（代码随想录）](https://www.bilibili.com/video/BV1kd4y1o7on/)
 
 ---
-## 关键点（精简）
 
-
-
----
 
 ## 代码实现
+
