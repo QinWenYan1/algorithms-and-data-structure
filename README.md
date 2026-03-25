@@ -51,7 +51,7 @@ Data-Structure-and-Algorithm-Notes/
 ```
 
 ---
-## 📒 大模型笔记指令
+## 📒 大模型笔记指令（用于生成代码笔记）
 ```markdown
 
     ## 📋 你给我的输入模板（复制即用）
