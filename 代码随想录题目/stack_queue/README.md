@@ -23,6 +23,7 @@
 - ✅ [stack_queue_2_my_stack.md](./stack_queue_2_my_stack.md) — 用队列实现栈
 - ✅ [stack_queue_3_is_valid.md](./stack_queue_3_is_valid.md) — 有效的括号
 - ✅ [stack_queue_4_remove_duplicates.md](./stack_queue_4_remove_duplicates.md) — 删除相邻重复项
+- ✅ [stack_queue_5_eval_RPN.md](./stack_queue_5_eval_RPN.md) — 逆波兰表达式求值
 
 
 
