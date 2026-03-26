@@ -14,8 +14,8 @@
 - 🔷 [字符串（string）](./string/README.md) — 已开始  
 - 🔷 [双指针（double pointer）](./double_ptr/README.md) — 已开始  
 - 🔷 [栈与队列（stack_queue）](./stack_queue/README.md) — 已开始    
-- ⬜ 回溯 / DFS（backtracking） — 待添加  
-- ⬜ 二叉树（binary_tree） — 待添加  
+- 🔷 [二叉树（binary_tree）](./binary_tree/README.md) — 待添加 
+- ⬜ 回溯 / DFS（backtracking） — 待添加   
 - ⬜ 图论（graph） — 待添加
 
 ---
