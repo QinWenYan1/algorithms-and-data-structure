@@ -25,7 +25,7 @@
 - ✅ [stack_queue_4_remove_duplicates.md](./stack_queue_4_remove_duplicates.md) — 删除相邻重复项
 - ✅ [stack_queue_5_eval_RPN.md](./stack_queue_5_eval_RPN.md) — 逆波兰表达式求值
 - ✅ [stack_queue_6_max_sliding_window.md](./stack_queue_6_max_sliding_window.md) — 滑动窗口最大值
-
+- ✅ [stack_queue_7_top_k_frequent.md](./stack_queue_7_top_k_frequent.md) — 前 K 个高频元素
 
 ---
 
