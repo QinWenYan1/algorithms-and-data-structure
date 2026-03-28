@@ -9,7 +9,43 @@
 ---
 ## 关键点（精简）
 
+**总体思路**
+**递归DFS法**：利用函数调用栈隐式实现深度优先搜索，严格遵循"中 → 左 → 右"的访问顺序。
+
+**关键点**
+*   二叉树的3种DFS遍历顺序，所谓的序列都是以中间的节点为参考：
+    1. 前序列：中，左，右
+    2. 中序列：左，中，右
+    3. 后序列：左，右，中
+
+**易错提醒**
+* 在写递归之前，想清楚这3点九不会错：
+    1. 确定递归函数的**返回值**和**参数**
+    2. 确定**终止条件**（递归基）
+    3. 确定单个递归函数里的**逻辑**
+
 
 ---
-
 ## 代码实现
+
+```cpp
+class Solution {
+public:
+    void traverse(TreeNode *root, vector<int> &ret){
+        if (root != nullptr) {//递归基
+            ret.push_back(root->val); 
+            traverse(root->left, ret);
+            traverse(root->right, ret); 
+        } 
+    }
+
+    vector<int> preorderTraversal(TreeNode* root) {
+
+        //前置访问就是：中，左，右
+        vector<int> result;
+        traverse(root, result); 
+        return result; 
+        
+    }
+};
+```
