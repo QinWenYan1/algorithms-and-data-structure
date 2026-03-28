@@ -8,6 +8,7 @@
 
 
 - 📄 理论基础 — [二叉树列理论基础（代码随想录）](https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC) 
+- 📹 理论基础 — [二叉树理论基础视频（代码随想录）](https://www.bilibili.com/video/BV1Hy4y1t7ij/?spm_id_from=333.337.search-card.all.click&vd_source=7923b10dbf11c28879c337d8e0bfa8de)
 
 
 
@@ -18,7 +19,8 @@
 
 ## 目录（已创建 / 待创建）
 
-- ✅ [stack_queue_1_my_queue.md](./
+**二叉树遍历题**：
+* ✅ [binary_tree_1_preorder_traversal.md](./binary_tree_1_preorder_traversal.md)
 
 ---
 
