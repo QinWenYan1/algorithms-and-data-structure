@@ -20,7 +20,9 @@
 ## 目录（已创建 / 待创建）
 
 **二叉树遍历题**：
-* ✅ [binary_tree_1_preorder_traversal.md](./binary_tree_1_preorder_traversal.md)
+* ✅ [binary_tree_1_preorder_traversal.md](./binary_tree_1_preorder_traversal.md) - 前序遍历
+* ✅ [binary_tree_2_postorder_traversal.md](./binary_tree_2_postorder_traversal.md) - 后序遍历
+* ✅ [binary_tree_3_inorder_traversal.md](./binary_tree_3_inorder_traversal.md) - 中序遍历
 
 ---
 
