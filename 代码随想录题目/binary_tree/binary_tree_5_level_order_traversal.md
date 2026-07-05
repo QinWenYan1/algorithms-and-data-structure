@@ -4,8 +4,8 @@
 - **难度**：中等
 - **解析 / 学习链接**： 
    
-    - [🧠 文字解析（代码随想录）- 递归法](https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
-    - [🎥 视频讲解（代码随想录）- 递归法 ](https://www.bilibili.com/video/BV1GY4y1u7b2/?vd_source=7923b10dbf11c28879c337d8e0bfa8de)
+    - [🧠 文字解析（代码随想录）](https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
+    - [🎥 视频讲解（代码随想录）](https://www.bilibili.com/video/BV1GY4y1u7b2/?vd_source=7923b10dbf11c28879c337d8e0bfa8de)
 
 ---
 ## 关键点（精简）
@@ -21,7 +21,7 @@
    - 进入 `while` 后立即 `int levelSize = q.size()`，随后 `for` 只循环这么多次
    - 反例：若直接用 `while(!q.empty())` 不加内层 for，所有节点将混为一谈，结果退化为单维数组
 2. **对弹出元素进行读入**
-    - 通过 `front` 得到目标元素，并读入当前节点值
+    - 通过 `q.front()` 得到目标元素，并读入当前节点值，然后弹出 `q.pop()`
 3. **先左后右入队保证顺序**
    - `node->left` 先于 `node->right` 入队，下一层出队时自然也是左子树先被访问
    - 代码对应：`if (node->left) q.push(node->left);` 必须写在右子树之前
