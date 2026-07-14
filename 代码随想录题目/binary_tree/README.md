@@ -26,6 +26,7 @@
 * ✅ [binary_tree_4_unified_iteration_method.md](./binary_tree_4_unified_iteration_method.md) - 统一的迭代法
 * ✅ [binary_tree_5_level_order_traversal.md](./binary_tree_5_level_order_traversal.md) - 层序遍历
 * ✅ [binary_tree_6_invert_tree.md](./binary_tree_6_invert_tree.md) - 翻转二叉树
+* ✅ [binary_tree_7_is_symmetric.md](./binary_tree_7_is_symmetric.md) - 对称二叉树
 ---
 
 
