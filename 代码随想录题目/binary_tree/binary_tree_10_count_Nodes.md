@@ -1,6 +1,6 @@
 # 完全二叉树的节点个数 — count nodes
 
-- **题目（LeetCode 222）**： [🔗 题目](https://leetcode.cn/problems/minimum-depth-of-binary-tree/description/)  
+- **题目（LeetCode 222）**： [🔗 题目](https://leetcode.cn/problems/count-complete-tree-nodes/description/)  
 - **难度**：简单
 - **解析 / 学习链接**： 
    
@@ -9,4 +9,10 @@
 
 ---
 ## 关键点（精简）
+
+- **完全二叉树性质**
+    - **只有最后一层可能不满，除最后一层外**，上面所有层都必须达到最大节点数（第 k 层有 2k 个节点）
+    - **最后一层的节点可以不满，但必须全部集中在左侧**
+    ![alt text](images/2.png)
+
 
